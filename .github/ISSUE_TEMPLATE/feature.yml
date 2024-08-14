@@ -1,8 +1,6 @@
 name: Feature
 description: Create a new feature issue
 title: "[Feature]: "
-labels: []
-assignees:
 body:
   - type: textarea
     id: description
