@@ -1,0 +1,30 @@
+name: Feature
+description: Create a new feature issue
+title: "[Feature]: "
+labels: []
+assignees:
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe the feature.
+      placeholder: A clear and concise description of what the feature is.
+    validations:
+      required: true
+  - type: input
+    id: expected-time
+    attributes:
+      label: Expected time
+      description: An estimate of the time required to complete this feature.
+      placeholder: 7.5 hours
+    validations:
+      required: true
+  - type: input
+    id: actual-time
+    attributes:
+      label: Actual time
+      description: The exact time needed to complete this feature.
+      placeholder: 7.5 hours
+    validations:
+      required: true
