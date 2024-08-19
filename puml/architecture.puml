@@ -1,0 +1,18 @@
+@startuml
+
+left to right direction
+
+node User {
+        [Frontend] <<browser>>
+}
+
+cloud Azure {
+    database cloudstorage
+    database postgres
+    [Frontend]--[Server]
+    [Keycloak]-l-[Server]
+    [Server]-l-cloudstorage
+    [Server]--postgres
+}
+
+@enduml
