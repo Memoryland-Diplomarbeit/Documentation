@@ -1,0 +1,42 @@
+@startuml
+
+entity User {
+    u_id: number
+    u_username: varchar2
+    u_email: varchar2
+}
+
+entity PhotoAlbum {
+    pa_id: number
+    pa_name: varchar2
+}
+
+entity Photo {
+    p_id: number
+    p_name: varchar2
+}
+
+entity Memoryland {
+    m_id: number
+    m_name: varchar2
+}
+
+entity MemorylandType {
+    mt_id: number
+    mt_name: varchar2
+    mt_photoamount: number
+}
+
+entity MemorylandConfiguration {
+    mc_id: number
+    mc_position: number
+}
+
+User||-l-o{PhotoAlbum
+PhotoAlbum||--o{Photo
+User||--o{Memoryland
+Memoryland}o-r-||MemorylandType
+Memoryland||--o{MemorylandConfiguration
+MemorylandConfiguration}o-l-||Photo
+
+@enduml
